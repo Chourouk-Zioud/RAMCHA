@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="861.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JAVAFX.AjouterCoursController">
+    <stylesheets>
+        <URL value="@ajoutercours.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="162.0" layoutY="165.0" prefHeight="21.0" prefWidth="56.0" text="Nom" />
+      <Label layoutX="142.0" layoutY="245.0" prefHeight="21.0" prefWidth="95.0" text="Categorie" />
+      <Label layoutX="152.0" layoutY="306.0" prefHeight="30.0" prefWidth="56.0" text="Sujet" />
+      <Label layoutX="156.0" layoutY="378.0" text="Niveau" />
+      <TextField fx:id="ajout_nom_cours" layoutX="271.0" layoutY="160.0" />
+      <TextField fx:id="ajout_sujet_cours" layoutX="271.0" layoutY="306.0" />
+      <Button fx:id="ajout_enregistrer_cours" layoutX="600.0" layoutY="471.0" mnemonicParsing="false" onAction="#enregistrer_cours" text="Enregistrer" />
+      <ComboBox fx:id="ajout_categorie_cours" layoutX="281.0" layoutY="240.0" onAction="#choicecat" prefWidth="150.0" promptText="Selectionner" />
+      <ComboBox fx:id="ajout_niveau_cours" layoutX="281.0" layoutY="373.0" onAction="#choiceniveau" prefWidth="150.0" promptText="Selectionner" />
+      <Button fx:id="ajout_cours_annule1" layoutX="729.0" layoutY="471.0" mnemonicParsing="false" onAction="#ajout_cours_annulee" text="Annuler" />
+      <Label fx:id="champ_nom_cours" layoutX="553.0" layoutY="165.0" text="remplir ce champ" />
+      <Label fx:id="champ_nom_categorie" layoutX="553.0" layoutY="245.0" text="remplir ce champ" />
+      <Label fx:id="champ_sujet_cours" layoutX="553.0" layoutY="311.0" text="remplir ce champ" />
+      <Label fx:id="champ_nom_niveau" layoutX="553.0" layoutY="389.0" text="remplir ce champ" />
+   </children>
+</AnchorPane>
