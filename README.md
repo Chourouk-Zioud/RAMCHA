@@ -3,7 +3,7 @@
 
 Projet PIDEV – Projet Ramcha : Conception et développement d'une application Desktop et Web pour la gestion des services à domicile reparti sur 6 modules :
   * E-shop
-  * Relations clients
+  * Gestion des reclamations
   * Gestion des services
   * Gestion des factures
   * Gestion des formations
