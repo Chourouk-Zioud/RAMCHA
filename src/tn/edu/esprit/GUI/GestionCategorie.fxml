@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="752.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.GestionCategorieController">
+   <children>
+      <Pane prefHeight="752.0" prefWidth="1220.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane layoutY="83.0" prefHeight="669.0" prefWidth="231.0" style="-fx-background-color: #556B2F;">
+               <children>
+                  <Button layoutX="16.0" layoutY="595.0" mnemonicParsing="false" onAction="#retourCatg" prefHeight="49.0" prefWidth="200.0" style="-fx-background-color: #778899;" stylesheets="@ramcha.css" text="Retour" textFill="#f8f8f8">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="158.0" mnemonicParsing="false" onAction="#gomagasin" prefHeight="103.0" prefWidth="231.0" style="-fx-background-color: #556B2F;">
+                     <graphic>
+                        <ImageView fitHeight="92.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@magasins.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutY="304.0" mnemonicParsing="false" onAction="#openArticle" prefHeight="103.0" prefWidth="231.0" style="-fx-background-color: #556B2F;">
+                     <graphic>
+                        <ImageView fitHeight="83.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@articles.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <TableView fx:id="categTab" layoutX="274.0" layoutY="139.0" prefHeight="599.0" prefWidth="714.0" stylesheets="@pidev.css">
+              <columns>
+                <TableColumn minWidth="0.0" prefWidth="0.0" text="Discription" />
+                <TableColumn fx:id="libelletab" prefWidth="193.0" text="libelle" />
+                  <TableColumn fx:id="DiscriptionTab" prefWidth="519.0" text="Description" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchcat" layoutX="1013.0" layoutY="136.0">
+               <stylesheets>
+                  <URL value="@ramcha.css" />
+                  <URL value="@pidev.css" />
+               </stylesheets>
+            </TextField>
+            <Label layoutX="1013.0" layoutY="113.0" text="Search">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="1013.0" layoutY="245.0" mnemonicParsing="false" onAction="#suppcat" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #778899;" text="Supprimer">
+               <stylesheets>
+                  <URL value="@ramcha.css" />
+                  <URL value="@pidev.css" />
+               </stylesheets>
+            </Button>
+            <Button layoutX="1013.0" layoutY="196.0" mnemonicParsing="false" onAction="#ajoutccat" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #778899;" text="Ajouter">
+               <stylesheets>
+                  <URL value="@ramcha.css" />
+                  <URL value="@pidev.css" />
+               </stylesheets>
+            </Button>
+            <Button layoutX="1013.0" layoutY="654.0" mnemonicParsing="false" onAction="#modfCatg" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #778899;" text="Modifier">
+               <stylesheets>
+                  <URL value="@ramcha.css" />
+                  <URL value="@pidev.css" />
+               </stylesheets>
+            </Button>
+            <Button layoutX="1013.0" layoutY="295.0" mnemonicParsing="false" onAction="#selectCateg" prefHeight="31.0" prefWidth="186.0" style="-fx-background-color: #778899;" text="Select">
+               <stylesheets>
+                  <URL value="@ramcha.css" />
+                  <URL value="@pidev.css" />
+               </stylesheets>
+            </Button>
+            <Label fx:id="ErrSrlCat" layoutX="1020.0" layoutY="581.0" prefHeight="21.0" prefWidth="186.0" textFill="#f80505">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="libellecatrg" layoutX="1013.0" layoutY="364.0" prefHeight="31.0" prefWidth="186.0" style="-fx-background-radius: 20;" />
+            <TextArea fx:id="discCateg" layoutX="1013.0" layoutY="442.0" prefHeight="184.0" prefWidth="186.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="1013.0" layoutY="337.0" text="Libelle Categorie" textFill="#5b4d4d" />
+            <Label layoutX="1013.0" layoutY="408.0" text="Description Categorie" textFill="#5b4d4d" />
+            <Label fx:id="ErrLibellCateg" layoutX="1131.0" layoutY="337.0" prefHeight="21.0" prefWidth="23.0" text="*" textFill="#ee0000" />
+            <Label fx:id="errDiscCateg" layoutX="1169.0" layoutY="408.0" prefHeight="21.0" prefWidth="30.0" text="*" textFill="#ee0000" />
+            <Label fx:id="ajoutSucclabel" layoutX="698.0" layoutY="499.0" prefHeight="35.0" prefWidth="239.0" textFill="#0f8001">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="84.0" prefHeight="84.0" prefWidth="1139.0" style="-fx-background-color: #556B2F;">
+               <children>
+                  <Label layoutX="394.0" layoutY="25.0" prefHeight="21.0" prefWidth="352.0" text="Gestion des Categories Articles" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="84.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Caplog_1.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

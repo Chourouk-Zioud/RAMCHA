@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="734.0" prefWidth="1191.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.View1Controller">
+   <children>
+      <TableView fx:id="tableaux_services1" layoutX="428.0" layoutY="182.0" prefHeight="473.0" prefWidth="700.0">
+         <columns>
+            <TableColumn fx:id="nom_ser1" prefWidth="230.0" text="Nom Service" />
+            <TableColumn fx:id="nbr_ouv_ser1" minWidth="0.0" prefWidth="0.0" text="Nbr ouvrier" />
+            <TableColumn fx:id="prix_ser1" prefWidth="153.0" text="Prix " />
+            <TableColumn fx:id="desc_ser1" prefWidth="175.0" text="Description" />
+            <TableColumn fx:id="date_deb_ser1" minWidth="0.0" prefWidth="0.0" text="Date début" />
+            <TableColumn fx:id="Date_fin_ser1" minWidth="0.0" prefWidth="0.0" text="Date Fin" />
+            <TableColumn fx:id="Disponibilite_ser1" prefWidth="175.0" text="Disponiblite" />
+         </columns>
+      </TableView>
+      <VBox prefHeight="726.0" prefWidth="418.0" styleClass="right-bar" stylesheets="@../values/style.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="159.0" text="Ramcha" textFill="#878787">
+                     <font>
+                        <Font name="Cambria Bold" size="33.0" />
+                     </font>
+                  </Label>
+                  <Label text="meilleure choix" textFill="#878787">
+                     <font>
+                        <Font name="Cambria" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0" stylesheets="@../values/style.css" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <TextField fx:id="searchrest1" onKeyReleased="#searchact2" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@../values/style.css">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btSearch1" mnemonicParsing="false" onAction="#btnsearch" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@../values/style.css" text="Search" textFill="WHITE" />
+               </children>
+               <styleClass>
+                  <String fx:value="search-box" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </HBox>
+            <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+            <VBox fx:id="chosenServiceCard" alignment="CENTER" prefHeight="501.0" prefWidth="238.0" style="-fx-background-color: #556B2F;" styleClass="shadow" stylesheets="@../values/style.css">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="335.0">
+                     <children>
+                        <Label fx:id="nomappLable" prefHeight="48.0" prefWidth="276.0" text="Ramcha" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="335.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fx:id="omg" fitHeight="277.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Capturelogo.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="118.0" />
+                        <Separator prefHeight="0.0" prefWidth="118.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="335.0" />
+               </children>
+            </VBox>
+            <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

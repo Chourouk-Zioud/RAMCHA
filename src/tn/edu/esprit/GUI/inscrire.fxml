@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane_inscr" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.InscrireController">
+   <children>
+      <ImageView fitHeight="67.0" fitWidth="170.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Ramcha.PNG" />
+         </image>
+      </ImageView>
+      <Text fill="#140f7c" layoutX="197.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom  " wrappingWidth="83.3994140625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_cin" layoutX="106.0" layoutY="92.0" prefHeight="36.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="176.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Prenom ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_nom" layoutX="105.0" layoutY="172.0" prefHeight="36.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="198.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIN  " wrappingWidth="83.3994140625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_prenom" layoutX="105.0" layoutY="260.0" prefHeight="36.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <DatePicker fx:id="daten" layoutX="539.0" layoutY="97.0" prefHeight="36.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="587.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Date de naissance ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#140f7c" layoutX="626.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_adresse" layoutX="539.0" layoutY="174.0" prefHeight="36.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="607.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code Postal ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_code" layoutX="539.0" layoutY="261.0" prefHeight="36.0" prefWidth="267.0" styleClass="sinsc-box" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="1037.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Tel ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_num" layoutX="958.0" layoutY="98.0" prefHeight="36.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="1027.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse e-mail ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txt_email" layoutX="967.0" layoutY="183.0" prefHeight="36.0" prefWidth="267.0" promptText="user@gmail.com" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#140f7c" layoutX="1031.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_inscri" layoutX="944.0" layoutY="467.0" mnemonicParsing="false" onAction="#inscr" styleClass="sinsc-box" stylesheets="@pidev.css" text="S'inscrire " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Text layoutX="95.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="as" layoutX="1255.0" layoutY="14.0" mnemonicParsing="false" onAction="#annuleri" styleClass="sinsc-box" stylesheets="@pidev.css" text="x" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="txt_mdp" layoutX="958.0" layoutY="264.0" prefHeight="31.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <ImageView fx:id="cap" fitHeight="106.0" fitWidth="186.0" layoutX="859.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="code" layoutX="1053.0" layoutY="374.0" prefHeight="31.0" prefWidth="137.0" promptText="Captcha" styleClass="transparent" stylesheets="@pidev.css" />
+      <Label fx:id="label1" layoutX="335.0" layoutY="656.0" />
+      <Button fx:id="rest" layoutX="1179.0" layoutY="370.0" mnemonicParsing="false" onAction="#reinit" prefHeight="31.0" prefWidth="92.0" styleClass="sinsc-box" stylesheets="@pidev.css" text="Actualiser" textFill="#140f7c" />
+      <Text fill="#d00909" layoutX="382.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="382.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="379.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="808.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="808.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="808.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="1234.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="1238.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#d00909" layoutX="1234.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <HBox layoutX="-6.0" layoutY="526.0" prefHeight="74.0" prefWidth="1312.0" style="-fx-background-color: #556B2F;" />
+      <Text layoutX="612.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="#140f7c" layoutX="176.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lien image">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="image" layoutX="105.0" layoutY="358.0" prefHeight="32.0" prefWidth="267.0" styleClass="text-input" stylesheets="@pidev.css" />
+      <Text fill="#d00909" layoutX="379.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <ImageView fx:id="im" fitHeight="197.0" fitWidth="186.0" layoutX="446.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="up" layoutX="206.0" layoutY="406.0" mnemonicParsing="false" onAction="#uploadi" styleClass="sinsc-box" stylesheets="@pidev.css" text="Upload" textFill="#fcf8f8" />
+   </children>
+</AnchorPane>

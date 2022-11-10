@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.ReatingController">
+    <stylesheets>
+        <URL value="@reating.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="835.0" layoutY="33.0" prefHeight="769.0" prefWidth="474.0" style="-fx-background-radius: 30; -fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="119.0" layoutY="39.0" text="List Commentaires">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="159.0" text="/5">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label fx:id="notreat" layoutX="197.0" layoutY="134.0" text="5">
+               <font>
+                  <Font name="System Bold Italic" size="73.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="303.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/javaFX%20(1)/javaFX/src/assest/clipart1753277.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="8.0" layoutY="230.0" prefHeight="32.0" prefWidth="515.0" style="-fx-background-color: #0063ff; -fx-background-radius: 50 50 0 0;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="520.0" style="-fx-background-color: #556B2F;" text="Reating" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea fx:id="textComm" layoutX="8.0" layoutY="262.0" prefHeight="496.0" prefWidth="439.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="136.0" layoutY="93.0" prefHeight="612.0" prefWidth="698.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+         <children>
+            <HBox prefHeight="126.0" prefWidth="696.0" style="-fx-background-color: #0063ff; -fx-background-radius: 50 50 0 0;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="126.0" prefWidth="696.0" style="-fx-background-color: #556B2F;" text="Reating" textFill="WHITE">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button layoutX="111.0" layoutY="476.0" mnemonicParsing="false" onAction="#clickbtn" prefHeight="52.0" prefWidth="468.0" style="-fx-background-color: #556B2F; -fx-background-radius: 10;" text="envoyer des commentaires" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Label layoutX="62.0" layoutY="156.0" text="vos commentaires nous aident à nous améliorer">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="198.0" text="S'il vous plaît laissez-nous savoir votre expérience de Cours">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="gr1" layoutX="103.0" layoutY="259.0" mnemonicParsing="false" text="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grating" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="gr3" layoutX="330.0" layoutY="258.0" mnemonicParsing="false" text="3" toggleGroup="$grating" />
+            <RadioButton fx:id="gr2" layoutX="220.0" layoutY="259.0" mnemonicParsing="false" text="2" toggleGroup="$grating" />
+            <RadioButton fx:id="gr4" layoutX="431.0" layoutY="259.0" mnemonicParsing="false" text="4" toggleGroup="$grating" />
+            <RadioButton fx:id="gr5" layoutX="541.0" layoutY="259.0" mnemonicParsing="false" text="5" toggleGroup="$grating" />
+            <TextArea fx:id="idc" layoutX="64.0" layoutY="305.0" prefHeight="127.0" prefWidth="549.0" style="-fx-background-color: #ffffff;" />
+         </children>
+      </Pane>
+      <ImageView fx:id="omg" fitHeight="144.0" fitWidth="148.0" layoutX="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@307967906_1554365234997361_1384103615953836273_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="retour" layoutX="50.0" layoutY="713.0" mnemonicParsing="false" onAction="#retour1" text="Retour" />
+   </children>
+</AnchorPane>
