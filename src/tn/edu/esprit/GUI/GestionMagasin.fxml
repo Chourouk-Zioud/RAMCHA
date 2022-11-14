@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.GestionMagasinController">
+   <children>
+      <Pane layoutY="-6.0" prefHeight="641.0" prefWidth="1189.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane layoutY="6.0" prefHeight="200.0" prefWidth="200.0" />
+            <TableView fx:id="TabMagasin" layoutX="276.0" layoutY="165.0" prefHeight="460.0" prefWidth="696.0" stylesheets="@pidev.css">
+              <columns>
+                <TableColumn fx:id="nommtab" prefWidth="162.0" text="Nom magasin" />
+                  <TableColumn fx:id="AdressMtab" prefWidth="185.0" text="Adresse " />
+                  <TableColumn fx:id="EmailMTab" prefWidth="175.0" text="Email" />
+                  <TableColumn fx:id="TelMTab" minWidth="0.0" prefWidth="173.0" text="Telephone" />
+              </columns>
+            </TableView>
+            <Button layoutX="993.0" layoutY="313.0" mnemonicParsing="false" onAction="#GoAjoutMagasin" prefHeight="36.0" prefWidth="173.0" style="-fx-background-color: #778899;" stylesheets="@ramcha.css" text="Ajouter " />
+            <Button layoutX="993.0" layoutY="371.0" mnemonicParsing="false" onAction="#SuppMagasinGo" prefHeight="36.0" prefWidth="173.0" style="-fx-background-color: #778899;" stylesheets="@ramcha.css" text="Supprimer" />
+            <Button layoutX="993.0" layoutY="424.0" mnemonicParsing="false" onAction="#ModifierMagasinGo" prefHeight="36.0" prefWidth="173.0" style="-fx-background-color: #778899;" stylesheets="@ramcha.css" text="Modifier" />
+            <Button fx:id="getPdf" layoutX="993.0" layoutY="550.0" mnemonicParsing="false" onAction="#getPdf" prefHeight="36.0" prefWidth="173.0" style="-fx-background-color: #b70e0e;" stylesheets="@ramcha.css" text="PDF" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="searchmagasin" layoutX="993.0" layoutY="123.0" prefHeight="25.0" prefWidth="173.0" />
+            <Label layoutX="935.0" layoutY="130.0" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="641.0" prefWidth="262.0" style="-fx-background-color: #556B2F;">
+               <children>
+                  <Button layoutX="-1.0" layoutY="198.0" mnemonicParsing="false" onAction="#openCategGest" prefHeight="151.0" prefWidth="212.0" style="-fx-background-color: #556B2F;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="106.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@categories.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="1.0" layoutY="349.0" mnemonicParsing="false" onAction="#openarticlegest" prefHeight="133.0" prefWidth="215.0" style="-fx-background-color: #556B2F;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="122.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@articles.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="103.0" fitWidth="334.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Caplog_1.PNG" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="31.0" layoutY="544.0" mnemonicParsing="false" onAction="#retour" prefHeight="59.0" prefWidth="200.0" style="-fx-background-color: #778899;" stylesheets="@ramcha.css" text="Retour" textFill="#f8f8f8">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="selMagErr" layoutX="969.0" layoutY="486.0" prefHeight="21.0" prefWidth="222.0" stylesheets="@ramcha.css" textFill="#d70303">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="262.0" layoutY="6.0" prefHeight="96.0" prefWidth="927.0" style="-fx-background-color: #556B2F;">
+               <children>
+                  <Label layoutX="366.0" layoutY="27.0" text="Liste des magasins" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="68.0" layoutX="691.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="userinfo" layoutX="759.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="153.58886831253767" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

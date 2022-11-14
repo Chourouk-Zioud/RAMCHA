@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" styleClass="gardient-background" stylesheets="@pidev.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.DashbordController">
+   <top>
+      <HBox prefHeight="61.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="61.0" prefWidth="290.0" text="ADMIN DASHBOARD " textFill="#fffdfd">
+               <font>
+                  <Font name="Bernard MT Condensed" size="21.0" />
+               </font>
+            </Label>
+            <Text fill="#ebebeb" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------------------------------------------------------------------------------------------------------------------" wrappingWidth="956.77734375">
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <HBox prefHeight="100.0" prefWidth="290.0" styleClass="container" stylesheets="@pidev.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <AnchorPane prefHeight="809.0" prefWidth="320.0">
+               <children>
+                  <Button fx:id="da" layoutX="3.0" layoutY="122.0" mnemonicParsing="false" onAction="#menu" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Gestion des utilisateurs" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="122.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="gocmdadmin" layoutX="1.0" layoutY="195.0" mnemonicParsing="false" onAction="#gocmdadmin" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Gestion des commandes" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="195.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="goadminservice" layoutX="3.0" layoutY="299.0" mnemonicParsing="false" onAction="#goadminservice" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Gestion des services" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="268.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="dastat" layoutX="2.0" layoutY="573.0" mnemonicParsing="false" onAction="#stat" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Statistique" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="560.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="dadec" layoutX="2.0" layoutY="711.0" mnemonicParsing="false" onAction="#decon" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Déconnexion" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <ImageView fitHeight="124.0" fitWidth="218.0" layoutX="-80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@313075923_445458367698838_3771581823026974950_n.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="85.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="HADJ KACEM Chaima">
+                     <font>
+                        <Font name="Bodoni MT Condensed" size="32.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="1.0" layoutY="406.0" mnemonicParsing="false" onAction="#gotoformations" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" text="Gestion des formations" textFill="#f8f8f8" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="341.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="3.0" layoutY="422.0" mnemonicParsing="false" onAction="#gomagasin" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Gestion des magasins" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="414.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="3.0" layoutY="499.0" mnemonicParsing="false" onAction="#goreclamation" prefHeight="55.0" prefWidth="287.0" styleClass="search-box" stylesheets="@pidev.css" text="Gestions des reclamations" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="487.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Pane maxHeight="-Infinity" prefHeight="0.0" prefWidth="30.0" stylesheets="@pidev.css" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <VBox prefWidth="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="285.0" prefWidth="973.0" styleClass="container" stylesheets="@pidev.css" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                     <children>
+                        <Text fill="#fffefe" layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="SOCIAL MEDIA">
+                           <font>
+                              <Font name="Bodoni MT Condensed" size="39.0" />
+                           </font>
+                        </Text>
+                        <VBox alignment="CENTER" layoutX="14.0" layoutY="51.0" prefHeight="200.0" prefWidth="260.0">
+                           <children>
+                              <ImageView fitHeight="89.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@youtube_512px.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" text="150 new ">
+                                 <font>
+                                    <Font name="Arial Bold" size="28.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="YouTube Subscribers">
+                                 <font>
+                                    <Font name="Arial" size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <Text layoutX="298.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="298.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="298.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="299.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="299.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="300.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="300.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <VBox alignment="CENTER" layoutX="683.0" layoutY="53.0" prefHeight="200.0" prefWidth="260.0">
+                           <children>
+                              <ImageView fitHeight="89.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@instagram_512px.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" text="100 new ">
+                                 <font>
+                                    <Font name="Arial Bold" size="28.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Instagram Followers">
+                                 <font>
+                                    <Font name="Arial" size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <Text layoutX="663.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="663.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="663.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="663.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="663.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="663.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <Text layoutX="663.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                        <VBox alignment="CENTER" layoutX="357.0" layoutY="51.0" prefHeight="200.0" prefWidth="260.0">
+                           <children>
+                              <ImageView fitHeight="87.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@facebook_500px.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" text="600 new ">
+                                 <font>
+                                    <Font name="Arial Bold" size="28.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="Likes">
+                                 <font>
+                                    <Font name="Arial" size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="315.0" prefWidth="490.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <VBox layoutX="-12.0" layoutY="1.0" prefHeight="318.0" prefWidth="491.0" styleClass="container" stylesheets="@pidev.css">
+                     <children>
+                        <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="TEMPS DE TRAVAIL">
+                           <font>
+                              <Font name="Bodoni MT Condensed" size="39.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <LineChart fx:id="lineChart" legendVisible="false">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="491.0" layoutY="1.0" prefHeight="317.0" prefWidth="485.0" spacing="20.0" styleClass="container" stylesheets="@pidev.css">
+                     <children>
+                        <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="NOS PREGRAMMES " wrappingWidth="280.146484375">
+                           <font>
+                              <Font name="Bodoni MT Condensed" size="41.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <PieChart fx:id="piechart" prefHeight="241.0" prefWidth="467.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></PieChart>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="175.0" prefWidth="976.0" styleClass="container" stylesheets="@pidev.css">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="shadow" text="NOMBRES DES UTILISATEURS">
+                     <font>
+                        <Font name="Bodoni MT Condensed" size="39.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane prefHeight="127.0" prefWidth="121.0">
+                     <HBox.margin>
+                        <Insets bottom="50.0" right="5.0" top="20.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="600.0">
+                     <children>
+                        <ImageView fitHeight="96.0" fitWidth="70.0" layoutX="72.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@contacts_500px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="66.0" fitWidth="64.0" layoutX="273.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@support_500px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="112.0" fitWidth="70.0" layoutX="430.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@document_480px.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="DARKOLIVEGREEN" layoutX="35.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilisateurs :" wrappingWidth="73.27880859375">
+                           <font>
+                              <Font name="Bodoni MT Condensed" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="DARKOLIVEGREEN" layoutX="249.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prestateurs :">
+                           <font>
+                              <Font name="Bodoni MT Condensed" size="22.0" />
+                           </font>
+                        </Text>
+                        <Text fill="DARKOLIVEGREEN" layoutX="423.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Demandeurs :">
+                           <font>
+                              <Font name="Bodoni MT Condensed" size="21.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lu" layoutX="115.0" layoutY="15.0" text="Label" />
+                        <Label fx:id="lp" layoutX="334.0" layoutY="15.0" text="Label" />
+                        <Label fx:id="ld" layoutX="509.0" layoutY="14.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

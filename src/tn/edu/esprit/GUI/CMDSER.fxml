@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor1" prefHeight="710.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.CMDSERController">
+    <children>
+      <HBox layoutX="-4.0" layoutY="611.0" prefHeight="102.0" prefWidth="1129.0" style="-fx-background-color: #556B2F;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false" translateX="930.0">
+               <image>
+                  <Image url="@Serviceclient.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </ImageView>
+         </children></HBox>
+      <Text fx:id="wrongLog" layoutX="436.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="retourser" layoutX="639.0" layoutY="549.0" mnemonicParsing="false" onAction="#RETOUR30" prefHeight="54.0" prefWidth="222.0" stylesheets="@ramcha.css" text="Retour" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="cmmanderserviceser" layoutX="878.0" layoutY="549.0" mnemonicParsing="false" onAction="#C_SERVICE" prefHeight="54.0" prefWidth="222.0" stylesheets="@ramcha.css" text="          Commander" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <Text fx:id="text1ser" layoutX="73.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="text2ser" fill="MIDNIGHTBLUE" layoutX="73.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date requis* :">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="dateser" layoutX="299.0" layoutY="479.0" prefHeight="54.0" prefWidth="245.0" />
+      <TableView fx:id="tabservice" layoutX="275.0" layoutY="173.0" onMouseClicked="#idSer" prefHeight="296.0" prefWidth="574.0" stylesheets="@ramcha.css">
+        <columns>
+          <TableColumn fx:id="nomService" prefWidth="274.0" text="Nom service" />
+          <TableColumn fx:id="prixService" prefWidth="290.0" text="Prix service-J" />
+        </columns>
+      </TableView>
+      <Text fx:id="text2ser1" fill="MIDNIGHTBLUE" layoutX="59.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de jours* :">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Spinner fx:id="nbjours" editable="true" layoutX="299.0" layoutY="549.0" prefHeight="54.0" prefWidth="245.0" />
+      <Label fx:id="erreur" layoutX="59.0" layoutY="408.0" prefHeight="21.0" prefWidth="304.0" />
+      <Label layoutX="22.0" layoutY="117.0" text="Choisir un service à commander : " textFill="MIDNIGHTBLUE" underline="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <HBox layoutX="1.0" prefHeight="112.0" prefWidth="1125.0" style="-fx-background-color: #556B2F;">
+         <children>
+            <ImageView fx:id="imgser1" fitHeight="112.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@307967906_1554365234997361_1384103615953836273_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text layoutX="896.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* : Champs obligatoires pour la validation du commande" wrappingWidth="199.9999824166298" />
+      <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="896.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@panier.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="68.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" translateX="850.0" translateY="20.0">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="userinfo" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="930.0" translateY="60.0" />
+   </children>
+   
+</AnchorPane>

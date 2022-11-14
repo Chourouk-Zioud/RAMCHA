@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor1" prefHeight="748.0" prefWidth="1102.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.ALL_FACTURE_ARTICLEController">
+    <children>
+      <HBox layoutX="-8.0" layoutY="639.0" prefHeight="109.0" prefWidth="1121.0" style="-fx-background-color: #556B2F;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false" translateX="920.0">
+               <image>
+                  <Image url="@Serviceclient.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </ImageView>
+         </children></HBox>
+      <Label fx:id="label" layoutX="103.0" layoutY="486.0" text="Label" visible="false" />
+      <TableView fx:id="tabfacture" layoutX="273.0" layoutY="235.0" onMouseClicked="#tabfactureclick" prefHeight="312.0" prefWidth="549.0" stylesheets="@ramcha.css">
+        <columns>
+          <TableColumn fx:id="datefacture" prefWidth="255.0" text="Date de facture" />
+          <TableColumn fx:id="total" prefWidth="263.0" text="Total" />
+        </columns>
+      </TableView>
+      <Button fx:id="retourfacture" layoutX="889.0" layoutY="560.0" mnemonicParsing="false" onAction="#retourfacture" prefHeight="58.0" prefWidth="190.0" styleClass="Button" stylesheets="@ramcha.css" text="Retour" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </Button>
+      <Label layoutX="29.0" layoutY="135.0" text="Liste des facture des commandes des articles : " textFill="MIDNIGHTBLUE" underline="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <HBox layoutX="-8.0" layoutY="-4.0" prefHeight="112.0" prefWidth="1121.0" style="-fx-background-color: #556B2F;">
+         <children>
+            <ImageView fx:id="imgser" fitHeight="112.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@307967906_1554365234997361_1384103615953836273_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="68.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" translateX="870.0" translateY="10.0">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="userinfo" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="940.0" translateY="50.0" />
+   </children>
+</AnchorPane>
