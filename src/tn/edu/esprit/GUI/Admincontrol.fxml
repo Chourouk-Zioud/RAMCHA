@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor1" prefHeight="685.0" prefWidth="1231.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.AdmincontrolController">
+   <children>
+      <HBox layoutX="-2.0" layoutY="592.0" prefHeight="94.0" prefWidth="1286.0" style="-fx-background-color: #556B2F;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false" translateX="1090.0">
+               <image>
+                  <Image url="@Serviceclient.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </ImageView>
+         </children></HBox>
+      <Button fx:id="adminarticlelist" layoutX="94.0" layoutY="166.0" mnemonicParsing="false" onAction="#openlistarticle" prefHeight="81.0" prefWidth="644.0" stylesheets="@ramcha.css" text="Voir la liste des commandes des articles" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="adminfacturearticlelist" layoutX="94.0" layoutY="255.0" mnemonicParsing="false" onAction="#openfacturearticle" prefHeight="81.0" prefWidth="644.0" stylesheets="@ramcha.css" text="Voir la liste des factures des article" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="adminservicelist" layoutX="94.0" layoutY="345.0" mnemonicParsing="false" onAction="#openservicelist" prefHeight="81.0" prefWidth="644.0" stylesheets="@ramcha.css" text="Voir la liste des commandes des services" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="adminservicefacturelist" layoutX="94.0" layoutY="436.0" mnemonicParsing="false" onAction="#openfactureservice" prefHeight="81.0" prefWidth="644.0" stylesheets="@ramcha.css" text="Voir la liste des factures des services" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="devisdevisA3" layoutX="327.0" layoutY="527.0" mnemonicParsing="false" onAction="#retouradmindash" prefHeight="56.0" prefWidth="178.0" stylesheets="@ramcha.css" text="Retour" textFill="#407ea4">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Button>
+      <Label fx:id="label" layoutX="103.0" layoutY="486.0" text="Label" visible="false" />
+      <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="807.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@iconcommande.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="807.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@iconcommande.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="864.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les commandes des articles :" underline="true" wrappingWidth="319.6708984375">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="864.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les commandes des services :" underline="true" wrappingWidth="319.6708984375">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="850.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande en cours de traitement :" />
+      <Text layoutX="850.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande en cours de livraison :" />
+      <Text layoutX="850.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande traitée :" />
+      <Text layoutX="850.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande en cours de traitement :" />
+      <Text layoutX="850.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande en cours de livraison: " />
+      <Text layoutX="850.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande traitée :" />
+      <Text fx:id="traitementarticle" layoutX="1109.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="livraisonarticle" layoutX="1109.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="traiteearticle" layoutX="1109.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="traitementservice" layoutX="1109.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="livraisonservice" layoutX="1109.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="traiteeservice" layoutX="1109.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="14.0" layoutY="112.0" text="Gestion des commandes :" textFill="MIDNIGHTBLUE" underline="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <HBox layoutX="1.0" prefHeight="112.0" prefWidth="1284.0" style="-fx-background-color: #556B2F;">
+         <children>
+            <ImageView fx:id="imgser" fitHeight="112.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@307967906_1554365234997361_1384103615953836273_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="68.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" translateX="1000.0" translateY="15.0">
+         <image>
+            <Image url="@user.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="userinfo" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="1080.0" translateY="55.0" />
+      
+   </children>
+</AnchorPane>

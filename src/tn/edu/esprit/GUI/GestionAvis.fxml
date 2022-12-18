@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.esprit.GUI.GestionAvisController">
+   <children>
+      <Pane prefHeight="575.0" prefWidth="1198.0" style="-fx-background-color: #D7DBDD;">
+         <children>
+            <Pane prefHeight="575.0" prefWidth="242.0" style="-fx-background-color: #556B2F;">
+               <children>
+                  <Button layoutY="473.0" mnemonicParsing="false" onAction="#retourAvvis" prefHeight="44.0" prefWidth="242.0" style="-fx-background-color: #778899;" styleClass="sinsc-box" stylesheets="@pidev.css" text="Retour" textFill="WHITE" />
+                  <ImageView fitHeight="251.0" fitWidth="274.0" layoutX="-4.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@VOTRE-AVIS-NOUSINTERESSE.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="103.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Caplog_1.PNG" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <TableView fx:id="tabAvis" layoutX="254.0" layoutY="136.0" prefHeight="422.0" prefWidth="666.0" stylesheets="@pidev.css">
+              <columns>
+                <TableColumn fx:id="detailsAvis" prefWidth="213.0" text="Detail" />
+                  <TableColumn fx:id="noteAvis" prefWidth="136.0" text="Note" />
+                  <TableColumn fx:id="ArticleAvis" prefWidth="152.0" text="Article" />
+                  <TableColumn fx:id="userAvis" prefWidth="164.0" text="User" />
+              </columns>
+            </TableView>
+            <Button layoutX="953.0" layoutY="353.0" mnemonicParsing="false" onAction="#ajouterAvis" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #778899;" text="Ajouter">
+               <stylesheets>
+                  <URL value="@pidev.css" />
+                  <URL value="@ramcha.css" />
+               </stylesheets></Button>
+            <Button layoutX="953.0" layoutY="407.0" mnemonicParsing="false" onAction="#ModifierAvis" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #778899;" text="Modifier">
+               <stylesheets>
+                  <URL value="@pidev.css" />
+                  <URL value="@ramcha.css" />
+               </stylesheets></Button>
+            <Button layoutX="953.0" layoutY="462.0" mnemonicParsing="false" onAction="#SuppAvis" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #778899;" text="Supprimer">
+               <stylesheets>
+                  <URL value="@pidev.css" />
+                  <URL value="@ramcha.css" />
+               </stylesheets></Button>
+            <ComboBox fx:id="selAvis" layoutX="953.0" layoutY="220.0" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #778899;" styleClass="sinsc-box">
+               <stylesheets>
+                  <URL value="@pidev.css" />
+                  <URL value="@ramcha.css" />
+               </stylesheets></ComboBox>
+            <Button layoutX="953.0" layoutY="259.0" mnemonicParsing="false" onAction="#AvisArt" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #778899;" text="Avis">
+               <stylesheets>
+                  <URL value="@pidev.css" />
+                  <URL value="@ramcha.css" />
+               </stylesheets></Button>
+            <TextField fx:id="searchavis" layoutX="953.0" layoutY="154.0" prefHeight="31.0" prefWidth="217.0" styleClass="xxx" stylesheets="@pidev.css" />
+            <Label fx:id="ErrSel" layoutX="953.0" layoutY="522.0" prefHeight="21.0" prefWidth="217.0" textFill="#ff0f0f">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="953.0" layoutY="298.0" mnemonicParsing="false" onAction="#acualiser" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #778899;" text="Actualiser">
+               <stylesheets>
+                  <URL value="@pidev.css" />
+                  <URL value="@ramcha.css" />
+               </stylesheets></Button>
+            <Label layoutX="993.0" layoutY="159.0" text="choisissez un article :" />
+            <Pane layoutX="242.0" prefHeight="88.0" prefWidth="964.0" style="-fx-background-color: #556B2F;">
+               <children>
+                  <Label layoutX="248.0" layoutY="17.0" prefHeight="54.0" prefWidth="234.0" text="Liste des Avis" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="68.0" layoutX="686.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="userinfo" layoutX="754.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="153.58886831253767" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
