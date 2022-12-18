@@ -1,7 +1,7 @@
 # RAMCHA
 # PIDEV 4SE5
 
-Projet PIDEV – Projet Ramcha : Conception et développement d'une application Desktop et Web pour la gestion des services à domicile reparti sur 6 modules :
+Projet PIDEV  (partie JAVA)– Projet Ramcha : Conception et développement d'une application Desktop et Web pour la gestion des services à domicile reparti sur 6 modules :
   * E-shop
   * Gestion des reclamations
   * Gestion des services
