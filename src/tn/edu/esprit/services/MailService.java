@@ -44,7 +44,7 @@ public class MailService {
 
             //create mail
             MimeMessage m = new MimeMessage(session);
-            m.setFrom(new InternetAddress("kais.chalghoumi@esprit.tn"));
+            m.setFrom(new InternetAddress("mail"));
             m.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress(to));
             m.setSubject(sub);
             m.setText(body);
