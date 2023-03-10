@@ -36,7 +36,7 @@ public class MailService {
           session = Session.getDefaultInstance(props, new javax.mail.Authenticator(){
               @Override
               protected PasswordAuthentication getPasswordAuthentication() {
-                  return new PasswordAuthentication("kais.chalghoumi@esprit.tn","zohra11422848");
+                  return new PasswordAuthentication("mail","mdp");
               }
           });
 
